@@ -1,3 +1,187 @@
+
+
+.nav-card {
+  background: var(--bg);
+  border: 2px solid var(--text2);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.nav-card.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.nav-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-color: var(--text3);
+}
+
+.nav-card h3 {
+  color: var(--text2);
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.nav-card p {
+  color: var(--text);
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.nav-card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: var(--text2);
+  color: var(--panel);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.nav-card a:hover {
+  background: var(--text3);
+}
+
+@media (max-width: 768px) {
+  .nav-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.mobile-projects { display: none; }
+.projects-struct { display: block; }
+
+@media (max-width: 768px) {
+  .mobile-projects { display: block; }
+  .projects-struct { display: none; }
+}
+.projects-list .project-btn {
+  display: inline-block;
+  margin: 15px auto 0 auto;
+  padding: 10px 20px;
+  max-width: 140px;
+  width: auto;
+  box-sizing: border-box;
+  text-align: center;
+  background: var(--text2) !important;
+  color: var(--panel) !important;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: background 0.3s;
+  border: none;
+}
+.projects-list .project-btn:hover {
+  background: var(--text3) !important;
+}
+/* Project cards for mobile view */
+/* Container handles left/right spacing */
+.projects-list {
+  display: block;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* Each card fills container but respects padding */
+.project-card {
+  width: 100%;
+  margin-bottom: 16px;       /* spacing between cards */
+  box-sizing: border-box;     /* include padding/border in width */
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 12px 16px;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .project-card {
+    margin-right: 12px;
+    margin-left: 12px;
+    width: auto;
+    max-width: calc(100vw - 36px);
+  }
+}
+.project-thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 16px;
+  border: 1px solid #ccc;
+}
+.project-info {
+  flex: 1;
+}
+.project-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--text2);
+  margin-bottom: 4px;
+  text-align: center;
+}
+.project-summary {
+  font-size: 0.98em;
+  color: var(--text);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Hide/show for mobile/desktop */
+.mobile-only { display: none; }
+.desktop-only { display: block; }
+
+@media (max-width: 768px) {
+  .projects-list { display: block; }
+  .mobile-only { display: flex; }
+  .desktop-only { display: none; }
+}
+@media (max-width: 768px) {
+  .gutter {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .vim-window {
+    margin: 20px !important;
+  }
+}
+/* VIM window styles from index.html for global use */
+.vim-window {
+  max-width:1600px;
+  margin:40px auto;
+  border:1px solid #dcdcdc;
+  border-radius:6px;
+  overflow:hidden;
+  background:var(--panel);
+  transition: background 0.3s;
+}
+.titlebar, .statusbar {
+  background: var(--status-bg);
+  color: var(--muted);
+  font-size: 13px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  transition: background 0.3s, color 0.3s;
+}
+.titlebar { border-bottom: 1px solid #e0e0e0; }
+.statusbar { border-top: 1px solid #e0e0e0; }
+.buffer {
+  min-height: 70vh;
+  padding: 20px;
+    max-width: 100%;
+}
 /* Large font for sub pages (not index.html) */
 .large-font .help, .large-font .buffer, .large-font .editor {
   font-size: 19px;
@@ -47,13 +231,14 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:ui-monospace, S
 .vim-window{max-width:1600px;margin:40px auto;border:1px solid #dcdcdc;border-radius:6px;overflow:hidden;background:var(--panel)}
 @media (max-width: 640px) {
   .vim-window {
-    border-left: 1px solid #dcdcdc;
-    border-right: 1px solid #dcdcdc;
+    margin: 12px;
+    border-radius: 6px;
     box-sizing: border-box;
+    max-width: calc(100vw - 24px);
+    border: 1px solid #dcdcdc;
+    background: var(--panel);
   }
   .help, .buffer, .editor {
-    max-width: 100vw;
-    width: 100vw;
     box-sizing: border-box;
   }
   .help p, .help {
@@ -92,10 +277,12 @@ kbd{background:var(--kbd-bg);border-radius:4px;padding:2px 6px;border:1px solid 
 
 /* Editor gutter + help alignment */
 .editor{display:flex;align-items:flex-start;margin-top:12px;font-family:ui-monospace, Consolas, 'Liberation Mono', monospace}
+ .editor{display:flex;align-items:flex-start;margin-top:12px;font-family:ui-monospace, Consolas, 'Liberation Mono', monospace;max-width:100%;}
 .gutter{width:48px;padding:0px 4px 6px 0;color:var(--muted);text-align:right;font-size:14px;line-height:24px}
 .gutter .ln{display:block;color:var(--line-number);height:24px}
 .gutter .tilde{display:block;color:var(--tilde);height:24px}
 .help{flex:1;padding:0px 16px;font-size:14px}
+ .help{flex:1;padding:0px 16px;font-size:14px;max-width:100%;}
 .help p{margin:0;line-height:24px;white-space:pre}
 @media (max-width: 640px) {
   .help p {
@@ -184,14 +371,6 @@ body.scheme-industry{
 }
 
 @media (max-width: 640px) {
-  .vim-window {
-    max-width: 100vw;
-    margin: 4px;
-    border-radius: 0;
-    box-shadow: none;
-    min-width: 0;
-    width: 100vw;
-  }
   .titlebar, .statusbar {
     font-size: 12px;
     padding: 6px 6px;
@@ -212,13 +391,11 @@ body.scheme-industry{
   .buffer {
     padding: 8px 2px;
     min-height: 0;
-    width: 100vw;
   }
   .editor {
     flex-direction: row;
     margin-top: 4px;
     font-size: 13px;
-    width: 100vw;
   }
   .gutter {
     width: 32px;
@@ -233,7 +410,6 @@ body.scheme-industry{
   .help {
     padding: 4px 4px 4px 8px;
     font-size: 13px;
-    width: 100vw;
     overflow-wrap: break-word;
   }
   .about-avatar{right:8px;top:6px;width:72px}

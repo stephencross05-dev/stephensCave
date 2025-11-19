@@ -88,8 +88,10 @@
          <p><span class="tok-comment"> This project is a portable device for logging GPS data during outdoor activities.</span></p>
          <p><span class="tok-comment"> > It is built on the esp32 platform and uses the internal flash storage to save activities.</span></p>
          <p><span class="tok-comment"> > The device includes a vibration sensor to have "always on" behavior.  </span></p>
-         <p><span class="tok-comment"> > When motion is detected, it powers on and begins recording GPS data every 5 seconds. After 3 minutes of no activity recordings are saved and it powers off.</span></p>
-         <p><span class="tok-comment"> > Recorded tracks are saved in flash storage and can be exported via serial connection to my linux machine, then a python script generates a heatmap of my tracks.</span></p>
+         <p><span class="tok-comment"> > When motion is detected, it powers on and begins recording GPS data every 5 seconds.</span></p>
+         <p><span class="tok-comment">      After 3 minutes of no activity recordings are saved and it powers off.</span></p>
+         <p><span class="tok-comment"> > Recorded tracks are saved in flash storage and can be exported via serial connection to my linux machine,</span></p>
+         <p><span class="tok-comment">      then a python script generates a heatmap of my tracks.</span></p>
          <p><span class="tok-comment"> */</span></p>
 
         <div class="photo-row">
@@ -103,7 +105,7 @@
           </div>
         </div>
         <div style="margin: 1em 0; text-align: center;">
-          <iframe src="gpx_heatmap.html" width="100%" height="400" style="border:1px solid #444; border-radius:8px;" title="GPS Heatmap"></iframe>
+          <iframe src="gpx_heatmap.html" width="100%" height="602" style="border:1px solid #444; border-radius:8px;" title="GPS Heatmap"></iframe>
           <div style="margin-top:0.5em;">
             <a href="gpx_heatmap.html" target="_blank" style="font-size:1em; color:#0077cc; text-decoration:underline;">View heatmap full screen</a>
           </div>
@@ -111,10 +113,12 @@
         <p style="margin-top: 4em"></p>
          <p><span class="tok-comment">/* What I learned</span></p>
          <p><span class="tok-comment"> > Initally I designed this project on the components that I had lying around on my bench, </span></p>
-         <p><span class="tok-comment"> The only displays that I had were some cheap 7 segment LEDS, these serverely limited the usefulness of my user interface.  </span></p>
-         <p><span class="tok-comment"> > I used shift registers to control the 32 segment display pins, the shfiting propagation delay prevented me from using pwm to dim the displays hence the blue tape.</span></p>
+         <p><span class="tok-comment">      The only displays that I had were some cheap 7 segment LEDS, these serverely limited the usefulness of my user interface.  </span></p>
+         <p><span class="tok-comment"> > I used shift registers to control the 32 segment display pins, </span></p>
+         <p><span class="tok-comment">      The shfiting propagation delay prevented me from using pwm to dim the displays hence the blue tape.</span></p>
          <p><span class="tok-comment"> > I need to incorporate a battery location in the inital design concideration. </span></p>
-         <p><span class="tok-comment"> > I did not include protection from multiple voltage input sources.  DO NOT plug into computer and turn on battery power, it will kill it.</span></p>
+         <p><span class="tok-comment"> > I did not include protection from multiple voltage input sources.</span></p>
+         <p><span class="tok-comment">      DO NOT plug into computer and turn on battery power, it will kill it.</span></p>
          <p><span class="tok-comment"> > I need to add a low power auto power off feature,  currently it will never stop discharging my LiPo battery.</span></p>
          <p><span class="tok-comment"> */</span></p>
 
