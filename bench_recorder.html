@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bench Recorder — stephen@cave</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="vim-window">
+      <div class="titlebar">
+        <span class="left">HP-LNX@stephens_cave:~</span>
+        <span class="center">- /home/stephen/bench_recorder.md</span>
+        <span class="right">VIM 8.2</span>
+      </div>
+      <main class="buffer">
+        <div class="editor">
+          <aside class="gutter" aria-hidden="true">
+            <span class="ln">1</span>
+            <span class="ln">2</span>
+            <span class="ln">3</span>
+            <span class="ln">4</span>
+            <span class="ln">5</span>
+            <span class="ln">6</span>
+            <span class="ln">7</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+          </aside>
+          <div class="help">
+            <p class="hint">/* <a href="projects.html">Back to Projects</a> */</p>
+            <p><span class="tok-comment">// Bench Recorder</span></p>
+            <p>This project is a bench-top data recorder for capturing analog and digital signals during experiments. It features USB export, live graphing, and flexible input options. More details coming soon.</p>
+            <p> </p>
+            <p class="hint">/* <a href="index.html">Back to Home</a> */</p>
+          </div>
+        </div>
+      </main>
+      <div class="statusbar">
+        <div class="modes" role="group" aria-label="Color scheme">
+          <button class="scheme-btn" data-scheme="default">Default</button>
+          <button class="scheme-btn" data-scheme="desert">Desert</button>
+          <button class="scheme-btn" data-scheme="industry">Industry</button>
+        </div>
+        <span class="file">/home/stephen/bench_recorder.md</span>
+        <span class="pos">Ln 1, Col 1</span>
+      </div>
+    </div>
+    <script>
+      // color scheme switcher: toggles body class and persists choice in localStorage
+      (function(){
+        const btns = Array.from(document.querySelectorAll('.scheme-btn'));
+        const storageKey = 'site:schema';
+        function applyScheme(name){
+          document.body.classList.remove('scheme-default','scheme-desert','scheme-industry');
+          if (name && name !== 'default') document.body.classList.add('scheme-' + name);
+          btns.forEach(b => b.classList.toggle('active', b.dataset.scheme === (name || 'default')));
+        }
+        btns.forEach(b => b.addEventListener('click', () => {
+          const scheme = b.dataset.scheme;
+          applyScheme(scheme);
+          try{ localStorage.setItem(storageKey, scheme); } catch(e){}
+        }));
+        try{
+          const saved = localStorage.getItem(storageKey) || 'default';
+          applyScheme(saved);
+        }catch(e){ applyScheme('default'); }
+      })();
+    </script>
+  </body>
+</html>

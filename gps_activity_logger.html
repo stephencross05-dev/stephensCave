@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GPS Activity Logger — stephen@cave</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="vim-window">
+      <div class="titlebar">
+        <span class="left">HP-LNX@stephens_cave:~</span>
+        <span class="center">- /home/stephen/gps_activity_logger.md</span>
+        <span class="right">VIM 8.2</span>
+      </div>
+      <main class="buffer">
+        <div class="editor">
+          <aside class="gutter" aria-hidden="true">
+            <span class="ln">1</span>
+            <span class="ln">2</span>
+            <span class="ln">3</span>
+            <span class="ln">4</span>
+            <span class="ln">5</span>
+            <span class="ln">6</span>
+            <span class="ln">7</span>
+            <span class="ln">8</span>
+            <span class="ln">9</span>
+            <span class="ln">10</span>
+            <span class="ln">11</span>
+            <span class="ln">12</span>
+            <span class="ln">13</span>
+            <span class="ln">14</span>
+            <span class="ln">15</span>
+            <span class="ln">16</span>
+            <span class="ln">17</span>
+            <span class="ln">18</span>
+            <span class="ln">19</span>
+            <span class="ln">20</span>
+            <span class="ln">21</span>
+            <span class="ln">22</span>
+            <span class="ln">23</span>
+            <span class="ln">24</span>
+            <span class="ln">25</span>
+            <span class="ln">26</span>
+            <span class="ln">27</span>
+            <span class="ln">28</span>
+            <span class="ln">29</span>
+            <span class="ln">30</span>
+            <span class="ln">31</span>
+            <span class="ln">32</span>
+            <span class="ln">33</span>
+            <span class="ln">34</span>
+            <span class="ln">35</span>
+            <span class="ln">36</span>
+            <span class="ln">37</span>
+            <span class="ln">38</span>
+            <span class="ln">39</span>
+            <span class="ln">40</span>
+            <span class="ln">41</span>
+            <span class="ln">42</span>
+            <span class="ln">43</span>
+            <span class="ln">44</span>
+            <span class="ln">45</span>
+            <span class="ln">46</span>
+            <span class="ln">47</span>
+            <span class="ln">48</span>
+            <span class="ln">49</span>
+            <span class="ln">50</span>
+            <span class="ln">51</span>
+            <span class="ln">52</span>
+            <span class="ln">53</span>
+            <span class="ln">54</span>
+            <span class="ln">55</span>
+            <span class="ln">56</span>
+            <span class="ln">57</span>
+            <span class="ln">58</span>
+            <span class="ln">59</span>
+            <span class="ln">60</span>
+            <span class="ln">61</span>
+            <span class="ln">62</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+          </aside>
+          <div class="help">
+         <p class="hint">/* <a href="projects.html">Back to Projects</a> */</p>
+         <p><span class="tok-comment">/* GPS Activity Logger</span></p>
+         <p><span class="tok-comment"> This project is a portable device for logging GPS data during outdoor activities.</span></p>
+         <p><span class="tok-comment"> > It is built on the esp32 platform and uses the internal flash storage to save activities.</span></p>
+         <p><span class="tok-comment"> > The device includes a vibration sensor to have "always on" behavior.  </span></p>
+         <p><span class="tok-comment"> > When motion is detected, it powers on and begins recording GPS data every 5 seconds. After 3 minutes of no activity recordings are saved and it powers off.</span></p>
+         <p><span class="tok-comment"> > Recorded tracks are saved in flash storage and can be exported via serial connection to my linux machine, then a python script generates a heatmap of my tracks.</span></p>
+         <p><span class="tok-comment"> */</span></p>
+
+        <div class="photo-row">
+          <div class="photo-col">
+            <img src="images/dale1.jpg" alt="GPS Logger Dale1" />
+            <img src="images/design.jpg" alt="GPS Logger Design" />
+          </div>
+          <div class="photo-col">
+            <img src="images/dale4.jpg" alt="GPS Logger Dale4" />
+            <img src="images/dale3.jpg" alt="GPS Logger Dale3" />
+          </div>
+        </div>
+        <div style="margin: 1em 0; text-align: center;">
+          <iframe src="gpx_heatmap.html" width="100%" height="400" style="border:1px solid #444; border-radius:8px;" title="GPS Heatmap"></iframe>
+          <div style="margin-top:0.5em;">
+            <a href="gpx_heatmap.html" target="_blank" style="font-size:1em; color:#0077cc; text-decoration:underline;">View heatmap full screen</a>
+          </div>
+        </div>
+        <p style="margin-top: 4em"></p>
+         <p><span class="tok-comment">/* What I learned</span></p>
+         <p><span class="tok-comment"> > Initally I designed this project on the components that I had lying around on my bench, </span></p>
+         <p><span class="tok-comment"> The only displays that I had were some cheap 7 segment LEDS, these serverely limited the usefulness of my user interface.  </span></p>
+         <p><span class="tok-comment"> > I used shift registers to control the 32 segment display pins, the shfiting propagation delay prevented me from using pwm to dim the displays hence the blue tape.</span></p>
+         <p><span class="tok-comment"> > I need to incorporate a battery location in the inital design concideration. </span></p>
+         <p><span class="tok-comment"> > I did not include protection from multiple voltage input sources.  DO NOT plug into computer and turn on battery power, it will kill it.</span></p>
+         <p><span class="tok-comment"> > I need to add a low power auto power off feature,  currently it will never stop discharging my LiPo battery.</span></p>
+         <p><span class="tok-comment"> */</span></p>
+
+
+            <p> </p>
+            <p class="hint">/* <a href="index.html">Back to Home</a> */</p>
+          </div>
+        </div>
+      </main>
+      <div class="statusbar">
+        <div class="modes" role="group" aria-label="Color scheme">
+          <button class="scheme-btn" data-scheme="default">Default</button>
+          <button class="scheme-btn" data-scheme="desert">Desert</button>
+          <button class="scheme-btn" data-scheme="industry">Industry</button>
+        </div>
+        <span class="file">/home/stephen/gps_activity_logger.md</span>
+        <span class="pos">Ln 1, Col 1</span>
+      </div>
+    </div>
+    <script>
+      // color scheme switcher: toggles body class and persists choice in localStorage
+      (function(){
+        const btns = Array.from(document.querySelectorAll('.scheme-btn'));
+        const storageKey = 'site:schema';
+        function applyScheme(name){
+          document.body.classList.remove('scheme-default','scheme-desert','scheme-industry');
+          if (name && name !== 'default') document.body.classList.add('scheme-' + name);
+          btns.forEach(b => b.classList.toggle('active', b.dataset.scheme === (name || 'default')));
+        }
+        btns.forEach(b => b.addEventListener('click', () => {
+          const scheme = b.dataset.scheme;
+          applyScheme(scheme);
+          try{ localStorage.setItem(storageKey, scheme); } catch(e){}
+        }));
+        try{
+          const saved = localStorage.getItem(storageKey) || 'default';
+          applyScheme(saved);
+        }catch(e){ applyScheme('default'); }
+      })();
+    </script>
+  </body>
+</html>

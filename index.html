@@ -45,31 +45,28 @@
             <span class="tilde">~</span>
             <span class="tilde">~</span>
             <span class="tilde">~</span>
-            <span class="tilde">~</span>
-            <span class="tilde">~</span>
           </aside>
 
           <div class="help">
             <p><span class="tok-comment">/*</span></p>
             <p><span class="tok-comment">  Welcome to Stephen's Cave </span></p>
-            <p><span class="tok-comment">  a comprehensive record of my projects and professional development in Electrical Engineering</span></p>
+            <p><span class="tok-comment">  A comprehensive record of my projects and professional development in Electrical Engineering</span></p>
             <p><span class="tok-comment">*/</span></p>
             <p> </p>
             <p><span class="tok-comment">  // Click on a header file </span></p>
-            <p><span class="tok-keyword">#define</span> <a href="about.html"><span class="tok-value">"about.html"</span></a></p>
-            <p><span class="tok-keyword">#define</span> <a href="projects.html"><span class="tok-value">"projects.html"</span></a></p>
-            <p><span class="tok-keyword">#define</span> <a href="professional.html"><span class="tok-value">"professional.html"</span></a></p>
+            <p><span class="tok-preproc">#define</span> <a href="about.html"><span class="tok-value">"about.html"</span></a></p>
+            <p><span class="tok-preproc">#define</span> <a href="projects.html"><span class="tok-value">"projects.html"</span></a></p>
+            <p><span class="tok-preproc">#define</span> <a href="professional.html"><span class="tok-value">"professional.html"</span></a></p>
             <p> </p>
             <p><span class="tok-keyword">while</span>(<span class="tok-type tok-value">true</span>) <span class="tok-type">{</span></p>
               <p style="padding-left:2em"><span class="tok-keyword">std::cout</span> &lt;&lt; <span class="tok-value">" A quick introduction: "</span> &lt;&lt; <span class="tok-keyword">std::endl</span>;</p>
               <p style="padding-left:2em"><span class="tok-keyword">ostream</span> <span class="tok-type">outputFile</span>(<span class="tok-value">"introduction.txt"</span>, <span class="tok-keyword">IOS::out</span>);</p>
               <p> </p>
-              <p style="padding-left:2em">outputFile &lt;&lt; <span class="tok-value">"Hello, I am a third year Electrical Engineering student at Georgia Tech. "</span>
-        &lt;&lt; <span class="tok-value"> "I will be graduating in the spring of 2027 and am pursuing a career "</span>
-        &lt;&lt; <span class="tok-value"> "in microwave engineering. In my free time I row for GT Crew. I also "</span>
-        &lt;&lt; <span class="tok-value"> "enjoy working on electronic projects, fixing my grassroots racecar, "</span>
-        &lt;&lt; <span class="tok-value"> "spending time outdoors rock climbing and trail running, and of course "</span>
-        &lt;&lt; <span class="tok-value"> "hanging out with my friends "</span>;</p>
+              <p style="padding-left:2em">outputFile &lt;&lt; <span class="tok-value">" Hello, I am a third year Electrical Engineering student at Georgia Tech. 
+                I will be graduating in the spring of 2027 and am pursuing a career in microwave engineering.  In my free time I row for GT Crew.  
+                I also enjoy working on electronics projects, and fixing my grassroots racecar.  To destress I like to spend time outdoors rock climbing and trail running,
+                and of course hanging out with friends."</span>;</p>
+                <p>};</p>
               <p style="padding-left:2em">outputFile.close();</p>
               <p><span class="tok-type">}</span></p>
           </div>
