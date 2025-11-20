@@ -1,4 +1,79 @@
+/* About page photo comment box */
+.about-photo-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  max-width: 100%;
+}
+.about-photo-comment {
+  margin-top: 8px;
+  width: 95%;
+  min-height: 38px;
+  max-width: 400px;
+  font-size: 0.85em;
+  border: 2px solid var(--text2);
+  border-radius: 8px;
+  padding: 4px 8px;
+  background: var(--bg);
+  color: var(--text2);
+  box-sizing: border-box;
+  resize: none;
+  opacity: 0.95;
+  font-family: inherit;
+  overflow-y: auto;
+  white-space: pre-line;
+  line-height: 1.3;
+}
+@media (max-width: 900px) {
+  .about-photo-col {
+    width: 100%;
+    max-width: 400px;
+  }
+  .about-photo-comment {
+    width: 98%;
+    max-width: 400px;
+  }
+}
+/* About page photo grid */
+.about-photo-row {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin: 18px 0;
+}
+.about-photo {
+  width: auto;
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+@media (max-width: 900px) {
+  .about-photo-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .about-photo {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@media (max-width: 640px) {
+  .contact-right {
+    text-align: left !important;
+    padding-right: 2em !important;
+    padding-left: 0 !important;
+  }
+}
 
+@media (max-width: 640px) {
+  .titlebar-path {
+    display: none !important;
+  }
+}
 
 .nav-card {
   background: var(--bg);
@@ -34,7 +109,6 @@
   font-size: 0.95em;
   line-height: 1.6;
 }
-
 .nav-card a {
   display: inline-block;
   margin-top: 15px;
@@ -283,7 +357,13 @@ kbd{background:var(--kbd-bg);border-radius:4px;padding:2px 6px;border:1px solid 
 .gutter .tilde{display:block;color:var(--tilde);height:24px}
 .help{flex:1;padding:0px 16px;font-size:14px}
  .help{flex:1;padding:0px 16px;font-size:14px;max-width:100%;}
-.help p{margin:0;line-height:24px;white-space:pre}
+.help p {
+  margin: 0;
+  line-height: 24px;
+  white-space: pre-line;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
 @media (max-width: 640px) {
   .help p {
     white-space:pre-line !important;
@@ -303,7 +383,13 @@ kbd{background:var(--kbd-bg);border-radius:4px;padding:2px 6px;border:1px solid 
 .help{position:relative}
 
 /* scheme buttons in statusbar */
-.modes{display:flex;gap:6px;align-items:center}
+.modes{
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
 .scheme-btn{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:4px 8px;border-radius:4px;font-family:inherit;color:var(--button-text);cursor:pointer}
 .scheme-btn.active{background:var(--accent);color:var(--button-text);border-color:transparent}
 .scheme-btn:focus{outline:2px solid rgba(0,0,0,0.08)}

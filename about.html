@@ -9,7 +9,12 @@
   <body class="large-font">
     <div class="vim-window">
       <div class="titlebar">
-        <span class="left">HP-LNX@stephens_cave:~</span>
+  <span class="titlebar-path">/stephens_cave/abou.html</span>
+        <div class="modes" role="group" aria-label="Color scheme">
+          <button class="scheme-btn" data-scheme="default">Default</button>
+          <button class="scheme-btn" data-scheme="desert">Desert</button>
+          <button class="scheme-btn" data-scheme="industry">Industry</button>
+        </div>
         <span class="right">VIM 8.2</span>
       </div>
       <main class="buffer">
@@ -44,59 +49,101 @@
             <span class="ln">27</span>
             <span class="ln">28</span>
             <span class="ln">29</span>
+            <span class="ln">30</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>            
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>            
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>            
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>            
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
+            <span class="tilde">~</span>
 
-            <span class="tilde">~</span>
-            <span class="tilde">~</span>
-            <span class="tilde">~</span>
-            <span class="tilde">~</span>
           </aside>
           <div class="help">
             <p class="hint">/* <a href="index.html">Back</a> */</p>
             <p><span class="tok-comment">// About Me</span></p>
             <p><span class="tok-keyword">const</span> name = <span class="tok-value">"Stephen Cross"</span>;</p>
             <p><span class="tok-keyword">struct</span> contact_info {</p>
-              <p style="padding-left:2em"><span class="tok-type">std::string</span> email = <span class="tok-value">"stephencross05@gmail.com"</span>;</p>
-              <p style="padding-left:2em"><span class="tok-type">std::string</span> email_alt = <span class="tok-value">"scross32@gatech.edu"</span>;</p>
-              <p style="padding-left:2em"><span class="tok-type">std::string</span> social = <span class="tok-value"><a href="https://www.linkedin.com/in/stephencross-/" target="_blank" rel="noopener">LinkedIn</a></span>;</p>
-
+              <p class="contact-right"><span class="tok-type">std::string</span> email = <span class="tok-value">"stephencross05@gmail.com"</span>;</p>
+              <p class="contact-right"><span class="tok-type">std::string</span> email_alt = <span class="tok-value">"scross32@gatech.edu"</span>;</p>
+              <p class="contact-right"><span class="tok-type">std::string</span> social = <span class="tok-value"><a href="https://www.linkedin.com/in/stephencross-/-" target="_blank" rel="noopener">LinkedIn</a></span>;</p>
             <p>};</p>
-            <p></p>
-            <p><span class="tok-comment">// Some photos of me</span></p>
-            <p class="hint">/* <a href="gallery.html">Gallery</a> */</p>
-            <p>  </p>
-<p><span class="tok-type">char</span> bio[1024] = <span class="tok-value">"</span>
-  My journey into electrical engineering has not followed the traditional route. When I graduated high school I was not
-  keen on attending a four year university. Instead I opted to enter the trades and study motorsports vehicle technology
-  at Lanier Technical College. While at Lanier Tech, I immersed myself in the hands-on application of motorsports vehicle
-  technology. I secured my first motorsports internship at a small Mazda Miata race team, OPM Autosports. There I learned
-  about how the industry worked, and the logistical nightmare that it is to transport 14 cars to tracks across the east
-  coast. After a year at OPM Autosports I found another internship with a higher-end race team, Denton Carden Racing
-  (DCR). It was around this time that I graduated from Lanier Tech and began to work full time as a mechanic and
-  trackside crew member. As I learned more about the motorsports industry, the more it became clear to me that I wanted
-  to keep it as a personal hobby and not a full time job. To have a more fulfilling job and explore what I am really
-  capable of, I decided to go back to school and earn an electrical engineering degree like my father. I enrolled at the
-  University of North Georgia in the Spring of 2023. After four tough semesters of holding a part time job at DCR and
-  working as a full time student, I was admitted into Georgia Tech. Now I commit all my time to the harder classes. With
-  my free time I decided to join the GT crew and get to spend all my weekends rowing on the Chattahoochee River. In the
-  future I plan to graduate and work for one year before returning to school for a master’s degree. I am interested in
-  antenna design and want to find a career working in the telecommunications industry, especially satellite
-  communications.
-</p>
-<p><span class="tok-value">";</span></p>
-<p> </p>
-
-<p> </p>
+              <p>
+                <p><span class="tok-type">char[]</span> <span class="tok-keyword">new</span> bio =</span></p>
+                <p>Hello, my name is Stephen Cross, I am in my fourth year of undergraduate electrical engineering from the Georgia Institute of Technology.  I am studying electrical engineering because I want to apply my talents in a constructive way, by hlping with meaningful projcts that improve the quality of peoples lives. Before GT I worked in motorsports where I got to spend a lot of time getting paid to do the hobby that I love.  Below are some of the picutres from those three years along with some of my other favorite things.</
+              </p>
+            <div class="about-photo-row">
+              <div class="about-photo-col">
+                <img src="sized images/gt40.jpg" alt="GT40" class="about-photo" style="width:400px;height:300px;object-fit:cover;" />
+                  <textarea class="about-photo-comment" readonly rows="2">An original 1966 gt40 that I got to help maintain</textarea>
+              </div>
+              <div class="about-photo-col">
+                <img src="sized images/porshce.jpg" alt="Porsche" class="about-photo" style="width:400px;height:300px;object-fit:cover;" />
+                  <textarea class="about-photo-comment" readonly rows="2">A day at the track changing rotors on a 1974 porsche RSR</textarea>
+              </div>
+              <div class="about-photo-col">
+                <img src="sized images/racing.jpg" alt="GT40" class="about-photo" style="width:400px;height:300px;object-fit:cover;" />
+                  <textarea class="about-photo-comment" readonly rows="2">Turning some laps in a Mazda Mx5 after I setup the suspension.</textarea>
+              </div>
+            </div>
+            <p>Outside of work and school I exercise to stay in shape and mentally fit.  When I can get out of Atlanta I enjoy rock climbing, backpacking, and trail running.  One of my best decisions at GT was joining the rowing crew.  Every week I get to make lifelong memories working with my friends to move the boats faster.  There is something intrinsically special about rowing on an 8 man boat where success lies solely in cooperation not individual effort. </p>
+            <div class="about-photo-row">
+              <div class="about-photo-col">
+                <img src="sized images/rowing1.jpg" alt="Rowing 1" class="about-photo" />
+                  <textarea class="about-photo-comment" readonly rows="2">Big smiles on the podium at Head of the Hooch regatta.  We placed first.</textarea>
+              </div>
+              <div class="about-photo-col">
+                <img src="sized images/rowing2.jpg" alt="Rowing 2" class="about-photo" />
+                  <textarea class="about-photo-comment" readonly rows="2">A beautiful day of rowing out in the Tennessee river.</textarea>
+              </div>
+              <div class="about-photo-col">
+                <img src="sized images/sandrock.jpg" alt="Sandrock" class="about-photo" style="width:400px;height:300px;object-fit:cover;" />
+                  <textarea class="about-photo-comment" readonly rows="2">Then end of a day rock climbing with the boys.</textarea>
+              </div>
+            </div>
+            <div class="about-photo-row">
+              <div class="about-photo-col">
+                <img src="sized images/greatsmokies.jpg" alt="Run Dog" class="about-photo" />
+                  <textarea class="about-photo-comment" readonly rows="2">The Great Smokies caputed on 35mm film in January.</textarea>
+              </div>
+              <div class="about-photo-col">
+                <img src="sized images/rowing8.jpg" alt="Rowing 8" class="about-photo" />
+                  <textarea class="about-photo-comment" readonly rows="2">Racing with some great friends in an 8 man boat.</textarea>
+              </div>
+              <div class="about-photo-col">
+                <img src="sized images/IMG_5116.jpg" alt="Composite" class="about-photo" />
+                  <textarea class="about-photo-comment" readonly rows="2">Heres a backpacking trip with my brothers on the PCT in Washington.</textarea>
+              </div>
+            </div>
             <p><span class="tok-comment">// Click to return </span></p>
             <p class="hint">/* <a href="index.html">Back</a> */</p>
           </div>
         </div>
       </main>
       <div class="statusbar">
-        <div class="modes" role="group" aria-label="Color scheme">
-          <button class="scheme-btn" data-scheme="default">Default</button>
-          <button class="scheme-btn" data-scheme="desert">Desert</button>
-          <button class="scheme-btn" data-scheme="industry">Industry</button>
-        </div>
         <span class="file">/home/stephen/about.md</span>
         <span class="pos">Ln 1, Col 1</span>
       </div>

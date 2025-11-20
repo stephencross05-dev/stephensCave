@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>stephen@cave:~ — portfolio</title>
+    <title>stephens_cave</title>
     <style>
+
         /* VIM default colorscheme */
         :root{
           --preproc: #e67e22;
@@ -89,6 +90,13 @@
         
         .titlebar { border-bottom: 1px solid #e0e0e0; }
         .statusbar { border-top: 1px solid #e0e0e0; }
+
+        @media (max-width: 640px) {
+          .titlebar-path {
+            display: none !important;
+            }
+        }
+
         
         .buffer {
             min-height: 70vh;
@@ -98,7 +106,7 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 60px 20px;
+            padding: 0px 20px 10px 20px;
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 1s forwards;
@@ -113,7 +121,7 @@
         
         .hero h1 {
             font-size: 3em;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             color: var(--text2);
             font-weight: 600;
         }
@@ -144,8 +152,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 40px;
-            padding: 40px 20px;
+            gap: 24px;
+            padding: 0 20px 40px 20px;
             opacity: 0;
             transform: translateX(-50px);
             transition: opacity 0.8s, transform 0.8s;
@@ -339,11 +347,15 @@
 </head>
 <body>
     <div class="vim-window">
-        <div class="titlebar">
-            <span class="left">HP-LNX@stephens_cave:~</span>
-            <span class="center">- /home/stephens_cave</span>
-            <span class="right">VIM 8.2</span>
+      <div class="titlebar">
+  <span class="titlebar-path">/stephens_cave/index</span>
+        <div class="modes" role="group" aria-label="Color scheme">
+          <button class="scheme-btn" data-scheme="default">Default</button>
+          <button class="scheme-btn" data-scheme="desert">Desert</button>
+          <button class="scheme-btn" data-scheme="industry">Industry</button>
         </div>
+        <span class="right">VIM 8.2</span>
+      </div>
 
         <main class="buffer">
             <!-- Hero Section -->
@@ -351,7 +363,6 @@
                 <h1>Stephen Cross<span class="typing-cursor"></span></h1>
                 <p class="subtitle">// Electrical Engineering student interested in telecommunications and RF systems</p>
             </div>
-
             <!-- Profile Section -->
             <div class="profile-section">
                 <img src="images/IMG_1720.JPG" alt="Stephen Cross" class="profile-image">
@@ -364,51 +375,46 @@
             <div class="nav-cards">
                 <div class="nav-card">
                     <h3>// About Me</h3>
-                    <p>Learn more about my background, education, and interests in electrical engineering and beyond.</p>
+                    <p>Learn more about my background and my life outside of work and school.</p>
                     <a href="about.html">Explore →</a>
                 </div>
                 
                 <div class="nav-card">
                     <h3>// Projects</h3>
-                    <p>Check out my technical projects ranging from RF systems to embedded electronics.</p>
+                    <p>Check out some of my completed projects.</p>
                     <a href="projects.html">View Projects →</a>
                 </div>
                 
                 <div class="nav-card">
                     <h3>// Experience</h3>
-                    <p>My professional journey including Amazon Project Kuiper and motorsports engineering.</p>
+                    <p>My professional journey from my engineering interships to my 3+ years of motorsports experience.</p>
                     <a href="professional.html">See Resume →</a>
                 </div>
             </div>
 
             <!-- Projects Highlight -->
             <div class="projects-highlight">
-                <h2>Featured Projects</h2>
+                <h2>Featured Work</h2>
                 <div class="project-grid">
                     <div class="project-item">
-                        <h4>Compact Antenna Test Range</h4>
-                        <p>Built a specialized CATR for customer terminal testing with anechoic chamber, positioner gimbal, and parabolic reflector at Amazon Project Kuiper.</p>
+                        <h4>Phased Array Antenna Test Range</h4>
+                        <p>Built a specialized test range for phased array antenna characterization while at Amazon's LEO satellite division.</p>
                     </div>
                     
                     <div class="project-item">
-                        <h4>RF Characterization System</h4>
-                        <p>Developed automated testing systems using Keysight and R&S equipment for EIRP, EVM, SNR, and RSSI measurements via SCPI commands.</p>
+                        <h4>GPS Bike Computer</h4>
+                        <p>An esp32 based GPS bike computer for tracking my rides around campus. Features an ultra low power state and shake to wake for long battery life.</p>
                     </div>
                     
                     <div class="project-item">
-                        <h4>Race Car Electronics</h4>
-                        <p>Designed and troubleshot mil-spec wire looms for vehicle management systems including Cosworth, MoTec, and AEM ECUs.</p>
+                        <h4>Digital Logic Motivation Clock</h4>
+                        <p>A personal clock that counts the seconds left in the semester, hand built to be a nice peice of wall art.</p>
                     </div>
                 </div>
             </div>
         </main>
 
         <div class="statusbar">
-            <div class="modes" role="group" aria-label="Color scheme">
-                <button class="scheme-btn" data-scheme="default">Default</button>
-                <button class="scheme-btn" data-scheme="desert">Desert</button>
-                <button class="scheme-btn" data-scheme="industry">Industry</button>
-            </div>
             <span class="right">Ln 1, Col 1</span>
         </div>
     </div>

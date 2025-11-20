@@ -9,7 +9,7 @@
   <body class="large-font">
     <div class="vim-window">
       <div class="titlebar">
-  <span class="titlebar-path">/stephens_cave/bench_recorder.html</span>
+  <span class="titlebar-path">/stephens_cave/hex_counter.html</span>
         <div class="modes" role="group" aria-label="Color scheme">
           <button class="scheme-btn" data-scheme="default">Default</button>
           <button class="scheme-btn" data-scheme="desert">Desert</button>
@@ -49,6 +49,10 @@
             <span class="ln">27</span>
             <span class="ln">28</span>
             <span class="ln">29</span>
+            <span class="ln">30</span>
+            <span class="ln">31</span>
+            <span class="ln">32</span>
+            <span class="ln">33</span>
             <span class="tilde">~</span>
             <span class="tilde">~</span>
             <span class="tilde">~</span>
@@ -56,23 +60,26 @@
           <div class="help">
          <p class="hint">/* <a href="projects.html">Back to Projects</a> */</p>
         <p class="hint">/* <a href="index.html">Back to Home</a> */</p>
-         <p><span class="tok-comment">/* Bench Press Recorder</span></p>
-         <p><span class="tok-comment"> > This is a project that I worked on for a class in my freshman year at UNG.  </span></p>
-         <p><span class="tok-comment"> > Its goal is to serve as an easy way to record the number of reps that you do with a barbell in the gym.</span></p>
+         <p><span class="tok-comment">/* Motivation Clock</span></p>
+         <p><span class="tok-comment"> > This project is a counting hex display clock.</span></p>
+         <p><span class="tok-comment"> > I built this as a motivational tool to help me visualise the time left in each semester.</span></p>
          <p><span class="tok-comment"> //  </span></p>
-         <p><span class="tok-comment"> > The design consists of a magnetic mounting counter that goes onto the bench press rack and a infared emmiter that goes on the barbell.  In application this should be a "smart" clip that holds the weight on and records your workout.</span></p>
-         <p><span class="tok-comment"> > I built the digital logic circuit that records reps based on an infared detector.  I also 3d printed an enclosure and inlayed magnents for easy use.  </span></p>
+         <p><span class="tok-comment"> > At the start of each semester on the first day of school I set in the number of seconds till my last final.  Spring 2026 is 10,504,800s (122 days) or 0xA0D700s</span></p>
+         <p><span class="tok-comment"> > A 555 one second timer counts down on the display indefinetly, this gives a nice phyiscal reminder to not waste time since itll never stop </span></p>
          <p><span class="tok-comment"> */</span></p>
 
         <div class="photo-row">
           <div class="photo-col">
-            <img src="sized images/bench1.jpg" alt="Bench Press Recorder1" />
-            <img src="sized images/bench2.jpeg" alt="Bench Press Recorder2" />
+            <img src="sized images/counter1.jpg" alt="Motivation Clock Counter1" />
+            <img src="sized images/counter2.jpg" alt="Motivation Clock counter2" />
           </div>
         </div>
          <p><span class="tok-comment">/* What I learned</span></p>
-         <p><span class="tok-comment"> > I should have bought a microcontroller instead of being cheap with the chips that I had, I could have used a better senesor and not needed anything on the barbell.</span></p>
-         <p><span class="tok-comment"> > My magnents where to weak and the whole device would slide down on certain metal surfaces.</span></p>
+         <p><span class="tok-comment"> > This was supposed to count in decimal, I ordered and built this with hex chips accidenatlly.</span></p>
+         <p><span class="tok-comment"> > The count input is very sensitive to static voltage changes.</span></p>
+         <p><span class="tok-comment"> > Using a potentiometer to adjust display brightness causes the dim level to change based upon how many LED segments are illuminated.</span></p>
+         <p><span class="tok-comment"> > 7 Segment displays do a very bad job at showing A, B, C, D, E, F,  instead the manufacturer uses different unique patterns so I had to include a cheatsheet.</span></p>
+         <p><span class="tok-comment"> > I need to add a battery so it will stay on and save the count when I unplug it or my house looses power.</span></p>
          <p><span class="tok-comment"> */</span></p>
 
 
